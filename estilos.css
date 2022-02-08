@@ -1,0 +1,475 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Fuentes*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+p {
+    font-size: 16px;
+}
+
+/*NavBar*/
+
+header {
+    background-color: #191919;
+    display: flex;
+    justify-content: space-between;
+    min-height: 60px;
+}
+header img {
+    height: 48px;
+}
+nav {
+        align-self: stretch;
+    
+}
+#nav-bar {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+#nav-bar a {
+    line-height: 60px;
+    text-decoration: none;
+    color: dodgerblue;
+    font-weight: 500;
+    padding: 0 10px;
+}
+#nav-bar a:hover {
+    transition-property: background-color,color;
+    transition-timing-function: ease-in;
+    transition-duration: 1s;
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+#agenda-button {
+    background-color: dodgerblue;
+    color: white!important;
+}
+
+/*Hero*/
+
+#hero {
+    min-height: 80vh;
+    background: url('./img/spom.jpg');
+    background-position: top left;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 2%;
+    gap: 20px;
+}
+#hero h1 {
+    font-size: 10vw;
+    color: white;
+}
+#hero p {
+    font-size: 4vw;
+    color: white;
+}
+.botoncito{
+    width: 140px;
+    height: 70px;
+    margin-bottom: 2%;
+    background-color: white;
+    border-radius: 6px;
+    font-weight: 900;
+    border: none;
+    text-align: center;
+    line-height: 70px;
+    text-decoration: none;
+    color: #191919;
+}
+.botoncito:hover {
+    transition: ease-in-out;
+    transition-property: color,background-color;
+    transition-duration: 1s;
+    color: white;
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+/*Lanzamientos*/
+
+#lanzamientos {
+    display: flex;
+    min-height: 50vh;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 2%;
+    margin-top: 160px;
+}
+.lanzamiento-box {
+    height: 400px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.lanzamiento-box:hover {
+    animation-name: box-anim;
+    animation-duration: 1s;
+}
+
+@keyframes box-anim {
+        form{
+            opacity: 1;
+            height:400px;
+            color: #000;
+        }
+        to {
+            opacity: 0.7;
+            height: 425px;
+            color: dodgerblue;
+        }
+
+}
+
+.lanzamiento-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.lanzamiento-box h3 {
+    font-size: 20px;
+}
+.lanzamiento-box p {
+    margin: 6px;
+}
+
+#lanzamiento-video {
+    width: 100%;
+    min-height: 40vh;
+    margin-top:     60px;
+}
+
+ #videin {
+     width: 100%;
+     height: auto;
+ }
+#botonera-video ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#botonera-video ul li:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/*Noticias*/
+#noticias-section {
+    display: flex;
+    min-height: 50vh;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 2%;
+    margin-top: 160px;
+}
+
+.noticias-box {
+    min-height: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.noticias-box:hover {
+    animation-name: noticias-anim;
+    animation-duration: 1s;
+}
+
+
+@keyframes noticias-anim {
+    form{
+        opacity: 1;
+        color: #000;
+    }
+    to {
+        opacity: 0.7;
+        color: dodgerblue;
+    }
+
+}
+
+
+.noticias-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.noticias-box h3 {
+    font-size: 20px;
+    margin-left: 6px;
+}
+.noticias-box p {
+    margin: 6px;
+}
+/*Tutoriales*/
+
+#tutoriales {
+    min-height: 80vh;
+    margin-top: 160px;
+    background: url('./img/tutoriales.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:60px;
+    color: dodgerblue;
+    margin-bottom: 60px;
+    font-weight: 700;
+}
+
+
+#tutoriales h2 {
+    font-size: 8vw;
+}
+#tutoriales p {
+    font-size: 4vw;
+    font-weight: 900;
+}
+
+/*Footer*/
+
+footer {
+    min-height: 200px;
+    background-color: #191919;
+    margin-top: 80px;
+    color: white;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#lista-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    transition: ease-in-out;
+    transition-property: color;
+    transition-duration: 1s;
+    color: dodgerblue;
+}
+footer img{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+
+/*DIBUJO*/
+
+#dibujo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#dibujo h2 {
+    align-self: start;
+    padding-left: 4%;
+    font-weight: 700;
+    font-size: 70px;
+}
+#dibujo-dragndrop {
+    display: flex;
+    justify-content: center;
+}
+#canvas {
+    padding-left: 50px;
+}
+
+
+/*Agenda de objetivos*/
+#agenda {
+    text-align: center;
+    border: 2px solid #191919;
+    padding: 2%;
+    margin: 0 2%;
+}
+
+#agenda h2 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#agenda p {
+    font-size:28px;
+    color: dodgerblue;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+/*Tereas*/
+
+#tareitas {
+    margin: auto;
+    width: 75%;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+#tarea {
+    resize: none;
+}
+
+.form-label {
+    font-weight: 700;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+#mostrar-tareas {
+    background-color: rgba(228, 218, 218, 0.3);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 2px;
+    padding-left: 1%;
+    width: 75%;
+}
+
+#mostrar-tareas p {
+    font-size: 14px;
+    color: #191919;
+    text-align: start;
+    padding: 0;
+    margin: 4px;
+}
+
+#titulo-pendientes {
+    margin-top: 24px;
+}
+
+#botones-form {
+    display: flex;
+    gap: 12px;
+}
+
+.boton-form {
+    width: 140px;
+    height: 30px;
+    margin-top: 12px;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+.boton-form-borrar {
+    width: 140px;
+    height: 30px;
+    margin-top: 12px;
+    background-color:rgb(199, 52, 52);
+    border: none;
+    border-radius: 6px;
+    color: white;
+}
+/*css de las tareas agregadas*/
+
+.titulo-tarea {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.borrar-tarea {
+    background-color: rgb(108, 243, 108);
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+}
+
+.mostrar-urgencia {
+    color: dodgerblue;
+    border-radius: 4px;
+}
+
+.mostrar-desc {
+    text-transform: capitalize;
+}
+
+
+/*SVg*/
+
+#svg-animacion {
+    margin-top:50px;
+    font-weight: 900;
+    font-size: 48px;
+}

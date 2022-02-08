@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+    <title>Maniac Games</title>
+</head>
+<body>
+<!--Navbar-->
+<header  id="navbar-sitio">
+  <a href="index.html"><img src="https://img.icons8.com/cotton/64/000000/tetris-game-console.png"id="logo" /></a>
+  <nav>
+    <ul id='nav-bar'>
+      <a href="#lanzamientos"><li>Lanzamientos</li></a>
+      <a href="#noticias-section"><li>Noticias</li></a>
+      <a href="#tutoriales"><li>Tutoriales</li></a>
+      <a href="#agenda" id='agenda-button'><li>Agenda</li></a>
+    </ul>
+  </nav>
+</header>
+<!--Hero-->
+<div id='hero'>
+    <h1>Maniac Games</h1>
+    <p>Tu portal sobre videojuegos</p>
+    <a href="#noticias-section" class="botoncito">Novedades</a>
+</div>
+<!--Lanzamientos-->
+<section id='lanzamientos'>
+  <article id='lanzamiento-uno' class="lanzamiento-box">
+      <img src="./img/zelda.jpeg" alt="">
+      <h3>The Legend of Zelda: Link's Awakening</h3>
+      <p>Descubrí todo lo que trae la ya famosa aventura de Link en su versión para Nintendo Switch</p>
+  </article>
+  <article id='lanzamiento-dos' class="lanzamiento-box">
+    <img src="./img/hades.jpg" alt="">
+    <h3>Análisis de Hades</h3>
+    <p>Una lección sobre cómo sobrevivir al infierno de ser otro roguelike más en un género sobreexplotado.</p>
+  </article>
+  <article id="lanzamiento-video">
+      <video src="./video.mp4" poster="./img/revii.jpg" id='videin'></video>
+      <div id="botonera-video">
+        <ul>
+          <li><a onclick="saltar(-5)" id='revovinar'>
+            <img src="https://img.icons8.com/android/24/000000/rewind.png"/>
+          </a></li>
+          <li><a onclick="reproducir()" >
+            <img src="https://img.icons8.com/android/24/000000/play.png"/ id='play-pause'>
+          </a></li>
+          <li><a onclick="detener()" id='stop'><img src="https://img.icons8.com/android/24/000000/stop.png"/></a></li>
+          <li><a onclick="saltar(5)" id='avanzar'>
+            <img src="https://img.icons8.com/android/24/000000/fast-forward.png"/>
+          </a></li>
+        </ul>
+      </div>
+  </article>
+</section>
+<!--Noticias-->
+<section id='noticias-section'>
+  <article class="noticias-box">
+    <img src="./img/dmc5.jpg" alt="">
+    <h3>Devil May Cry 5</h3>
+    <p>La pérdida de su brazo demoníaco, la invasión demoníaca y el paradero desconocido de Dante.</p>
+  </article>
+  <article class="noticias-box">
+    <img src="./img/feth.jpg" alt="">
+    <h3>Fire Emblem: Three Houses</h3>
+    <p>Decide el destino de un continente al borde de la guerra en Fire Emblem: Three Houses para Nintendo Switch.</p>
+  </article>
+  <article class="noticias-box">
+    <img src="./img/fg.jpg" alt="">
+    <h3>Fall Guys: Ultimate Knockout</h3>
+    <p>Una carrera alocada y cada vez más caótica en la que solo puede haber un vencedor.</p>
+  </article>
+  <article class="noticias-box">
+    <img src="./img/ow.jpeg" alt="">
+    <h3>Outer Wilds</h3>
+    <p>Toma el papel de un explorador espacial alienígena que se prepara para su primer vuelo en solitario.</p>
+  </article>
+  <article class="noticias-box">
+    <img src="./img/doom.jpg" alt="">
+    <h3>Doom Eternal</h3>
+    <p>Doom Slayer, un antiguo guerrero que lucha contra las fuerzas demoníacas del Infierno desde una perspectiva en primera persona.</p>
+  </article>
+  <article class="noticias-box">
+    <img src="./img/papermario.jpg" alt="">
+    <h3>Paper Mario: The Origami King</h3>
+    <p>Armado con su martillo y sus botas de toda la vida, Mario está más que listo para darle su merecido al invasor de origami.</p>
+  </article>
+</section>
+<!--TUtoriales-->
+<section id='tutoriales'>
+      <h2>¿Atascado?</h2>
+      <p>Mirá nuestros tutoriales y avanzá en tu Juego</p>
+      <a href="#" class="botoncito">Tutoriales</a>
+</section>
+<!--Agenda de tareas-->
+<section id='agenda'>
+  <div id='tareitas'>
+    <h2>¿Jugás a muchos juegos a la vez?</h2>
+    <p>Llevá un registro de tus objetivos pendientes</p>
+    <form action="" id="formulario">
+        <label for="id" class="form-label">Título Video Juego:</label>
+            <input type="text" id='id'>
+        <label for="tarea" class="form-label">Descripción de pendientes:</label>
+        <textarea name="tarea" id="tarea" cols="30" rows="10"></textarea>
+        <label for="urgencia" class="form-label">Urgencia:</label>
+            <select name="urgencia" id="urgencia">
+                <option value="Muy urgente">Muy Urgente</option>
+                <option value="Urgente">Urgente</option>
+                <option value="Poco urgente">Poco urgente</option>
+            </select>
+        <label for="fecha" class="form-label">Fecha:</label>
+            <input type="date" id="fecha">
+        <div id="botones-form">
+          <button type="submit" id='grabar' class="boton-form">Añadir</button>
+          <button onclick="borrarTodo()" class="boton-form-borrar">Borrar Todo</button>
+        </div>
+    </form>
+  </div>
+  <p id='titulo-pendientes'>Registro de Pendientes</p>
+  <div id="mostrar-tareas">
+      
+  </div>
+</section>
+<!--Saludo!-->
+<section id="dibujo">
+  <div id='svg-animacion'>
+      <svg  height="70">
+        <text x="50"  y="50" >
+        Continue?
+        <animate attributeName="fill" 
+        from="dodgerblue" to="lightgreen" dur="2s" repeatCount="indefinite" />
+        <animateMotion dur="1s" repeatCount="indefinite"
+        path="m 0,0 a 15,11 0 1 1 -30,0 15,11 0 1 1 30,0 z" />
+        </text>
+      </svg>
+
+  </div>
+  <div id="dibujo-dragndrop">
+    <canvas id="canvas" width="340" height="340" >
+  </div>
+  </canvas>
+</section>
+<footer>
+  <ul id='lista-footer'>
+    <li>
+      <a href="#lanzamientos">Lanzamientos</a>
+    </li>
+    <li>
+      <a href="#noticias-section">Noticias</a>
+    </li>
+    <li>
+      <a href="#tutoriales">Tutoriales</a>
+    </li>
+    <li>
+      <a href="#agenda">Agenda</a>
+    </li>
+
+  </ul>
+  <a href="index.html"><img src="https://img.icons8.com/cotton/64/000000/tetris-game-console.png"id="logo" /></a>
+</footer>
+</body>
+<script src="./script.js"></script>
+<script src="tareas.js"></script>
+</html>
